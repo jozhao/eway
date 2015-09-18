@@ -1,7 +1,7 @@
 {
   "name": "xing/eway",
   "type": "library",
-  "description": "eWay driver for the Drupal eWay integration payment processing library",
+  "description": "eWAY driver for the Drupal eWAY integration payment processing library",
   "keywords": [
     "eway",
     "gateway",
