@@ -1,0 +1,8 @@
+# XiNG Digital Australia http://www.xing.net.au
+composer.phar
+composer.lock
+phpunit.xml
+vendor/
+examples/
+.idea
+.DS_STORE
