@@ -1,0 +1,45 @@
+{
+  "name": "xing/eway",
+  "type": "library",
+  "description": "eWay driver for the Drupal eWay integration payment processing library",
+  "keywords": [
+    "eway",
+    "gateway",
+    "merchant",
+    "pay",
+    "payment",
+    "commerce",
+    "drupal",
+    "xing"
+  ],
+  "homepage": "http://xing.net.au/eway",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jason Guo",
+      "email": "jason.guo@xing.net.au",
+      "homepage": "http://xing.net.au/",
+      "role": "Developer"
+    },
+    {
+      "name": "Joseph Zhao",
+      "email": "joseph.zhao@xing.net.au",
+      "homepage": "http://xing.net.au/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "XiNG\\eWAY\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  }
+}
