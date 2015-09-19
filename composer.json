@@ -35,6 +35,14 @@
   "autoload": {
     "psr-4": {
       "XiNG\\eWAY\\": "src/"
+    },
+    "classmap": [
+      "src/XiNG/eWAY/eWAY.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "XiNG\\eWAY\\Tests\\": "tests/"
     }
   },
   "extra": {
