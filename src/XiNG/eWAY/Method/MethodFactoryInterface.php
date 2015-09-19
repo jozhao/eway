@@ -4,7 +4,7 @@
  * eWAY Payment Gateway - Token Payment
  */
 
-namespace XiNG\eWAY\Common;
+namespace XiNG\eWAY\Method;
 
 /**
  * Class MethodFactory

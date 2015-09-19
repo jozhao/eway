@@ -13,7 +13,7 @@
 
 namespace XiNG\eWAY;
 
-use XiNG\eWAY\Common\MethodFactory;
+use XiNG\eWAY\Method\MethodFactory;
 
 /**
  * Class eWAY

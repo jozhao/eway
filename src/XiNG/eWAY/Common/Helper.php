@@ -62,6 +62,22 @@ class Helper
     }
 
     /**
+     * @param $className
+     * @return string
+     */
+    public static function getMethodName($className)
+    {
+        if (0 === strpos($className, '\\')) {
+            $className = substr($className, 1);
+        }
+        if (0 === strpos($className, 'XiNG\\eWAY\\')) {
+            return trim(str_replace('\\', '_', substr($className, 11, -10)), '_');
+        }
+
+        return '\\'.$className;
+    }
+
+    /**
      * @param $shortName
      * @return mixed|string
      */
@@ -76,7 +92,7 @@ class Helper
             $shortName .= '\\';
         }
 
-        return '\\XiNG\\eWAY\\Method\\'.$shortName;
+        return '\\XiNG\\eWAY\\'.$shortName;
     }
 
     /**

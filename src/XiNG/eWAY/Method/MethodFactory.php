@@ -4,8 +4,9 @@
  * eWAY Payment Gateway - Token Payment
  */
 
-namespace XiNG\eWAY\Common;
+namespace XiNG\eWAY\Method;
 
+use XiNG\eWAY\Common\Helper;
 use XiNG\eWAY\Exception\RuntimeException;
 
 /**
