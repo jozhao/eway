@@ -3,6 +3,5 @@ composer.phar
 composer.lock
 phpunit.xml
 vendor/
-examples/
 .idea
 .DS_STORE
