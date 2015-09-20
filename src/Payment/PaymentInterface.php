@@ -1,16 +1,16 @@
 <?php
 
 /**
- * eWAY Payment Gateway - Token Payment
+ * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Method;
+namespace XiNG\eWAY\Payment;
 
 /**
- * Interface MethodInterface
- * @package XiNG\eWAY\Common
+ * Interface PaymentInterface
+ * @package XiNG\eWAY\Payment
  */
-interface MethodInterface
+interface PaymentInterface
 {
     /**
      * @param array $parameters

@@ -4,9 +4,9 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\RapidDirect;
+namespace XiNG\eWAY\Rapid;
 
-use XiNG\eWAY\Method\MethodAbstract;
+use XiNG\eWAY\Payment\PaymentAbstract;
 
 /**
  * eWAY Rapid Direct Gateway
@@ -67,15 +67,22 @@ use XiNG\eWAY\Method\MethodAbstract;
  * @link https://eway.io/api-v3/#authentication
  * @link https://go.eway.io/s/article/How-do-I-setup-my-Live-eWAY-API-Key-and-Password
  */
-class RapidDirect extends MethodAbstract
+class Direct extends PaymentAbstract
 {
     /**
      * @return string
      */
     public function getMethodName()
     {
-        return 'eWAY Rapid Direct';
+        return 'Rapid Direct';
     }
 
+    /**
+     * @param array $parameters
+     * @return mixed
+     */
+    public function purchase(array $parameters = array())
+    {
+        return $this->createRequest('\XiNG\eWAY\Rapid\Message\RapidDirectPurchaseRequest', $parameters);
+    }
 }
-

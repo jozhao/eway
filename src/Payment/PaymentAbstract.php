@@ -1,30 +1,32 @@
 <?php
 
 /**
- * eWAY Payment Gateway - Token Payment
+ * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Method;
+namespace XiNG\eWAY\Payment;
 
 use XiNG\eWAY\Common\Helper;
 
 /**
- * Class MethodAbstract
- * @package XiNG\eWAY\Method
+ * Class PaymentAbstract
+ * @package XiNG\eWAY\Payment
  */
-abstract class MethodAbstract implements MethodInterface
+abstract class PaymentAbstract implements PaymentInterface
 {
     /**
      * @var
      */
-    protected $parameters;
+    protected $parameters = array();
 
     /**
      * Create a new eWAY method instance
      */
-    public function __construct()
+    public function __construct($parameters = array())
     {
-        $this->initialize();
+        if (!empty($parameters)) {
+            $this->initialize($parameters);
+        }
     }
 
     /**
@@ -43,6 +45,16 @@ abstract class MethodAbstract implements MethodInterface
                 $this->setParameter($key, $value);
             }
         }
+
+        // Set parameters.
+        foreach ($parameters as $key => $value) {
+            if (is_array($value)) {
+                $this->setParameter($key, reset($value));
+            } else {
+                $this->setParameter($key, $value);
+            }
+        }
+
         Helper::initialize($this, $this->parameters);
 
         return $this;

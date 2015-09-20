@@ -13,7 +13,7 @@
 
 namespace XiNG\eWAY;
 
-use XiNG\eWAY\Method\MethodFactory;
+use XiNG\eWAY\Payment\PaymentFactory as PaymentFactory;
 
 /**
  * Class eWAY
@@ -32,7 +32,7 @@ class eWAY
     public static function getFactory()
     {
         if (is_null(static::$factory)) {
-            static::$factory = new MethodFactory;
+            static::$factory = new PaymentFactory;
         }
 
         return static::$factory;
@@ -41,7 +41,7 @@ class eWAY
     /**
      * @param GatewayFactory|null $factory
      */
-    public static function setFactory(MethodFactory $factory = null)
+    public static function setFactory(PaymentFactory $factory = null)
     {
         static::$factory = $factory;
     }

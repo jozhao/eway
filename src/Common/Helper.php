@@ -71,7 +71,7 @@ class Helper
             $className = substr($className, 1);
         }
         if (0 === strpos($className, 'XiNG\\eWAY\\')) {
-            return trim(str_replace('\\', '_', substr($className, 11, -10)), '_');
+            return trim(str_replace('\\', '_', substr($className, 9, -12)), '_');
         }
 
         return '\\'.$className;
@@ -88,9 +88,6 @@ class Helper
         }
         // replace underscores with namespace marker, PSR-0 style
         $shortName = str_replace('_', '\\', $shortName);
-        if (false === strpos($shortName, '\\')) {
-            $shortName .= '\\';
-        }
 
         return '\\XiNG\\eWAY\\'.$shortName;
     }

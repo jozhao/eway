@@ -12,5 +12,5 @@ namespace XiNG\eWAY\Payment;
  */
 interface PaymentFactoryInterface
 {
-    static function createPayment($payment, $parameters = array());
+    static function create($payment, $parameters = array());
 }
