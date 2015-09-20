@@ -15,10 +15,10 @@ interface MessageFactoryInterface
     /**
      * @return mixed
      */
-    public function createResponse();
+    static public function createResponse();
 
     /**
      * @return mixed
      */
-    public function createRequest();
+    static public function createRequest($class, $parameters = array());
 }
