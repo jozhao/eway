@@ -57,11 +57,9 @@ abstract class CollectionAbstract implements CollectionInterface
     }
 
     /**
-     * Set one parameter.
-     *
-     * @param string $key Parameter key
-     * @param mixed $value Parameter value
-     * @return CreditCard provides a fluent interface.
+     * @param $key
+     * @param $value
+     * @return $this
      */
     protected function setParameter($key, $value)
     {

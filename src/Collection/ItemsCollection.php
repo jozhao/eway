@@ -40,6 +40,11 @@ namespace XiNG\eWAY\Collection;
 class ItemsCollection extends CollectionAbstract
 {
     /**
+     * @var array
+     */
+    protected $parameters = array();
+
+    /**
      * Return default parameters.
      */
     function getDefaultParameters()

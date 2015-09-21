@@ -40,6 +40,125 @@ namespace XiNG\eWAY\Collection;
 class ItemCollection extends CollectionAbstract
 {
     /**
+     * @var array
+     */
+    protected $parameters = array();
+
+    /**
+     * @return mixed
+     */
+    public function getSKU()
+    {
+        return $this->getParameter('SKU');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setSKU($value)
+    {
+        $this->setParameter('SKU', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->getParameter('Description');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setDescription($value)
+    {
+        $this->setParameter('Description', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getQuantity()
+    {
+        return $this->getParameter('Quantity');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setQuantity($value)
+    {
+        $this->setParameter('Quantity', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUnitCost()
+    {
+        return $this->getParameter('UnitCost');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setUnitCost($value)
+    {
+        $this->setParameter('UnitCost', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTax()
+    {
+        return $this->getParameter('Tax');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setTax($value)
+    {
+        $this->setParameter('Tax', $value);
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotal()
+    {
+        return $this->getParameter('Total');
+    }
+
+    /**
+     * @param $value
+     * @return $this
+     */
+    public function setTotal($value)
+    {
+        $this->setParameter('Total', $value);
+
+        return $this;
+    }
+
+    /**
      * Return default parameters.
      */
     function getDefaultParameters()
