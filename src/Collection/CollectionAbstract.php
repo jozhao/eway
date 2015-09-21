@@ -33,6 +33,16 @@ abstract class CollectionAbstract implements CollectionInterface
      */
     public function initialize(array $parameters = array())
     {
+
+        // set default parameters
+        foreach ($this->getDefaultParameters() as $key => $value) {
+            if (is_array($value)) {
+                $this->setParameter($key, reset($value));
+            } else {
+                $this->setParameter($key, $value);
+            }
+        }
+
         Helper::initialize($this, $parameters);
 
         return $this;

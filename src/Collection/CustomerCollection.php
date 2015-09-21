@@ -405,7 +405,6 @@ class CustomerCollection extends CollectionAbstract
     public function getDefaultParameters()
     {
         return array(
-          'Customer' => array(
             'TokenCustomerID' => '',
             'Reference' => '',
             'Title' => '',
@@ -425,7 +424,6 @@ class CustomerCollection extends CollectionAbstract
             'Comments' => '',
             'Fax' => '',
             'Url' => '',
-          ),
         );
     }
 }

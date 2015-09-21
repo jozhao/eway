@@ -84,6 +84,6 @@ class Direct extends PaymentAbstract
      */
     public function purchase(array $parameters = array())
     {
-        return MessageFactory::createRequest('\XiNG\eWAY\Rapid\Message\RapidDirectPurchaseRequest', $parameters);
+        return MessageFactory::createRequest('\XiNG\eWAY\Rapid\Message\RapidDirectPurchaseRequest', $this->getParameters());
     }
 }

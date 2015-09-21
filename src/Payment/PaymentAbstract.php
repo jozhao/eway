@@ -7,6 +7,8 @@
 namespace XiNG\eWAY\Payment;
 
 use XiNG\eWAY\Common\Helper;
+use XiNG\eWAY\Collection\CardCollection;
+use XiNG\eWAY\Collection\CustomerCollection;
 
 /**
  * Class PaymentAbstract
@@ -158,5 +160,26 @@ abstract class PaymentAbstract implements PaymentInterface
     public function setApiTestMode($value)
     {
         return $this->setParameter('apiTestMode', $value);
+    }
+
+    /**
+     * @return PaymentAbstract
+     */
+    public function getCustomer()
+    {
+        return $this->setParameter('Customer', $value);
+    }
+
+    /**
+     * @param $customer
+     * @return PaymentAbstract
+     */
+    public function setCustomer($customer)
+    {
+        $customer = new CustomerCollection($customer);
+
+        $this->setParameter('Customer', $customer->getParameters());
+
+        return $this;
     }
 }

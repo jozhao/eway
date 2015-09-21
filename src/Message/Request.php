@@ -26,7 +26,7 @@ abstract class Request implements RequestInterface
     /**
      * @var
      */
-    private $data;
+    private $request;
 
     /**
      * Create a new eWAY method instance
@@ -48,11 +48,11 @@ abstract class Request implements RequestInterface
     {
         if (null !== $this->response) {
             throw new RuntimeException(
-              'Request cannot be modified after it has been sent!'
+                'Request cannot be modified after it has been sent!'
             );
         }
 
-        $this->data = new Collection($parameters);
+        $this->request = new Collection($parameters);
 
         return $this;
     }
