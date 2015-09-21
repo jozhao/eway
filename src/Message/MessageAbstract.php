@@ -6,6 +6,10 @@
 
 namespace XiNG\eWAY\Message;
 
+/**
+ * Class MessageAbstract
+ * @package XiNG\eWAY\Message
+ */
 abstract class MessageAbstract implements MessageInterface
 {
     /**
@@ -79,7 +83,7 @@ abstract class MessageAbstract implements MessageInterface
                 break;
             case 'integer':
             case 'double':
-                $this->headers[$name] = array((string)$value);
+                $this->headers[$name] = array((string) $value);
                 break;
             case 'array':
                 foreach ($value as &$v) {
@@ -89,8 +93,8 @@ abstract class MessageAbstract implements MessageInterface
                 break;
             default:
                 throw new \InvalidArgumentException(
-                    'Invalid header value '
-                    .'provided: '.var_export($value, true)
+                  'Invalid header value '
+                  .'provided: '.var_export($value, true)
                 );
         }
 
