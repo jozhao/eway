@@ -13,27 +13,18 @@ namespace XiNG\eWAY\Collection;
 interface CollectionInterface
 {
     /**
+     * @param array $parameters
      * @return mixed
      */
-    public function getLabel();
+    public function initialize(array $parameters = array());
 
     /**
      * @return mixed
      */
-    public function getDescription();
+    public function getParameters();
 
     /**
      * @return mixed
      */
-    public function getQuantity();
-
-    /**
-     * @return mixed
-     */
-    public function getPrice();
-
-    /**
-     * @return mixed
-     */
-    public function getCurrencyCode();
+    public function getDefaultParameters();
 }
