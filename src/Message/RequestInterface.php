@@ -22,9 +22,4 @@ interface RequestInterface
      * @return mixed
      */
     public function send();
-
-    /**
-     * @return mixed
-     */
-    public function sendData($data);
 }

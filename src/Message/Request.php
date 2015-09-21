@@ -51,28 +51,12 @@ abstract class Request implements RequestInterface
     public function initialize(array $parameters = array())
     {
         if (null !== $this->response) {
-            throw new RuntimeException('Request cannot be modified after it has been sent!');
+            throw new RuntimeException(
+              'Request cannot be modified after it has been sent!'
+            );
         }
 
-        // set default parameters
-        foreach ($this->getDefaultParameters() as $key => $value) {
-            if (is_array($value)) {
-                $this->setParameter($key, reset($value));
-            } else {
-                $this->setParameter($key, $value);
-            }
-        }
-
-        // Set parameters.
-        foreach ($parameters as $key => $value) {
-            if (is_array($value)) {
-                $this->setParameter($key, reset($value));
-            } else {
-                $this->setParameter($key, $value);
-            }
-        }
-
-        Helper::initialize($this, $this->parameters);
+        Helper::initialize($this, $parameters);
 
         return $this;
     }
@@ -138,17 +122,5 @@ abstract class Request implements RequestInterface
         $this->parameters[$key] = $value;
 
         return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function getDefaultParameters()
-    {
-        return array(
-            'apiKey' => '',
-            'apiSecret' => '',
-            'apiTestMode' => false,
-        );
     }
 }
