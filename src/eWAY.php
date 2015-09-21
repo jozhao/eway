@@ -57,4 +57,20 @@ class eWAY
 
         return call_user_func_array(array($factory, $method), $parameters);
     }
+
+    /**
+     * @return string
+     */
+    public static function getVersion()
+    {
+        return '1.0';
+    }
+
+    /**
+     * @return string
+     */
+    public static function getAPIVersion()
+    {
+        return '3.1';
+    }
 }
