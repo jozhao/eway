@@ -6,6 +6,7 @@
 
 namespace XiNG\eWAY\Message;
 
+use XiNG\eWAY\Collection\Collection;
 use XiNG\eWAY\Common\Helper;
 use XiNG\eWAY\Exception\RuntimeException;
 
@@ -15,11 +16,6 @@ use XiNG\eWAY\Exception\RuntimeException;
  */
 abstract class Request implements RequestInterface
 {
-    /**
-     * @var
-     */
-    protected $parameters;
-
     /**
      * An associated ResponseInterface.
      *
@@ -56,7 +52,7 @@ abstract class Request implements RequestInterface
             );
         }
 
-        Helper::initialize($this, $parameters);
+        $this->data = new Collection($parameters);
 
         return $this;
     }
