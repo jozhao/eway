@@ -6,11 +6,13 @@
 
 namespace XiNG\eWAY\Rapid\Message;
 
+use XiNG\eWAY\Message\Request;
+
 /**
- * Class RapidDirectPurchaseRequest
+ * Class RapidRequest
  * @package XiNG\eWAY\Rapid\Message
  */
-class RapidDirectPurchaseRequest extends RapidDirectRequest
+abstract class RapidRequest extends Request
 {
 
 }
