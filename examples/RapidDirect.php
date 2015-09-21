@@ -10,11 +10,11 @@ $payment = XiNG\eWAY\eWAY::create('Rapid_Direct');
 
 // Initialise the gateway
 $payment->initialize(
-    array(
-        'apiKey' => 'Rapid API Key',
-        'apiSecret' => 'Rapid API Password',
-        'apiTestMode' => true, // Or false when you are ready for live transactions
-    )
+  array(
+    'apiKey' => 'Rapid API Key',
+    'apiSecret' => 'Rapid API Password',
+    'apiTestMode' => true, // Or false when you are ready for live transactions
+  )
 );
 
 echo "<pre>";
@@ -22,20 +22,19 @@ var_export($payment->getParameters());
 echo "</pre>";
 
 // Create a credit card object
-$card = new XiNG\eWAY\Common\CreditCard(
-    array(
-        'firstName' => 'Example',
-        'lastName' => 'XiNG',
-        'number' => '4444333322221111',
-        'expiryMonth' => '12',
-        'expiryYear' => '2030',
-        'cvv' => '123',
-        'billingAddress1' => 'PO Box 521',
-        'billingCountry' => 'AU',
-        'billingCity' => 'Canberra',
-        'billingPostcode' => '2912',
-        'billingState' => 'ACT',
-    )
+$card = new XiNG\eWAY\Collection\CardCollection(
+  array(
+    'name' => 'Example XiNG',
+    'number' => '4444333322221111',
+    'expiryMonth' => '12',
+    'expiryYear' => '2030',
+    'CVN' => '123',
+    'billingAddress1' => 'PO Box 521',
+    'billingCountry' => 'AU',
+    'billingCity' => 'Canberra',
+    'billingPostcode' => '2912',
+    'billingState' => 'ACT',
+  )
 );
 
 echo "<pre>";
@@ -43,12 +42,12 @@ var_export($card);
 echo "</pre>";
 
 $request = $payment->purchase(
-    array(
-        'amount' => '10.00',
-        'currency' => 'AUD',
-        'transactionType' => 'Purchase',
-        'card' => $card,
-    )
+  array(
+    'amount' => '10.00',
+    'currency' => 'AUD',
+    'transactionType' => 'Purchase',
+    'card' => $card,
+  )
 );
 
 echo "<pre>";
