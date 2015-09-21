@@ -37,7 +37,7 @@ namespace XiNG\eWAY\Collection;
  * </code>
  *
  */
-class ItemsCollection extends CollectionAbstract
+class ItemCollection extends CollectionAbstract
 {
     /**
      * Return default parameters.
@@ -45,7 +45,12 @@ class ItemsCollection extends CollectionAbstract
     function getDefaultParameters()
     {
         return array(
-          'Items' => array(),
+          'SKU' => '',
+          'Description' => '',
+          'Quantity' => '',
+          'UnitCost' => '',
+          'Tax' => '',
+          'Total' => '',
         );
     }
 }
