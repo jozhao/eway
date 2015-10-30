@@ -4,7 +4,7 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Exception;
+namespace eWAY\Exception;
 
 /**
  * Class RuntimeException

@@ -4,11 +4,11 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Payment;
+namespace eWAY\Payment;
 
-use XiNG\eWAY\Common\Helper;
-use XiNG\eWAY\Collection\CardCollection;
-use XiNG\eWAY\Collection\CustomerCollection;
+use eWAY\Common\Helper;
+use eWAY\Collection\CardCollection;
+use eWAY\Collection\CustomerCollection;
 
 /**
  * Class PaymentAbstract

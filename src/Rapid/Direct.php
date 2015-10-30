@@ -4,10 +4,10 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Rapid;
+namespace eWAY\Rapid;
 
-use XiNG\eWAY\Payment\PaymentAbstract;
-use XiNG\eWAY\Message\MessageFactory;
+use eWAY\Payment\PaymentAbstract;
+use eWAY\Message\MessageFactory;
 
 /**
  * eWAY Rapid Direct Gateway
@@ -84,6 +84,6 @@ class Direct extends PaymentAbstract
      */
     public function purchase(array $parameters = array())
     {
-        return MessageFactory::createRequest('\XiNG\eWAY\Rapid\Message\RapidDirectPurchaseRequest', $this->getParameters());
+        return MessageFactory::createRequest('\eWAY\Rapid\Message\RapidDirectPurchaseRequest', $this->getParameters());
     }
 }

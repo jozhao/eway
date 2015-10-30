@@ -4,7 +4,7 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Message;
+namespace eWAY\Message;
 
 /**
  * Class MessageFactory

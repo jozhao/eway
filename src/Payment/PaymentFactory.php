@@ -4,10 +4,10 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Payment;
+namespace eWAY\Payment;
 
-use XiNG\eWAY\Common\Helper;
-use XiNG\eWAY\Exception\RuntimeException;
+use eWAY\Common\Helper;
+use eWAY\Exception\RuntimeException;
 
 /**
  * Class PaymentFactory

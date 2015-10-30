@@ -4,7 +4,7 @@
  * Helper class
  */
 
-namespace XiNG\eWAY\Common;
+namespace eWAY\Common;
 
 use InvalidArgumentException;
 
@@ -70,7 +70,7 @@ class Helper
         if (0 === strpos($className, '\\')) {
             $className = substr($className, 1);
         }
-        if (0 === strpos($className, 'XiNG\\eWAY\\')) {
+        if (0 === strpos($className, 'eWAY\\')) {
             return trim(str_replace('\\', '_', substr($className, 9, -12)), '_');
         }
 
@@ -89,7 +89,7 @@ class Helper
         // replace underscores with namespace marker, PSR-0 style
         $shortName = str_replace('_', '\\', $shortName);
 
-        return '\\XiNG\\eWAY\\'.$shortName;
+        return '\\eWAY\\'.$shortName;
     }
 
     /**

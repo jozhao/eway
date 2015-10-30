@@ -4,7 +4,7 @@
  * Currency class
  */
 
-namespace XiNG\eWAY\Common;
+namespace eWAY\Common;
 
 /**
  * Currency class

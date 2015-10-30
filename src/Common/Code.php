@@ -4,7 +4,7 @@
  * eWAY response code class
  */
 
-namespace XiNG\eWAY\Common;
+namespace eWAY\Common;
 
 /**
  * Class Code

@@ -4,11 +4,11 @@
  * Credit Card class
  */
 
-namespace XiNG\eWAY\Common;
+namespace eWAY\Common;
 
 use DateTime;
 use DateTimeZone;
-use XiNG\eWAY\Exception\InvalidCreditCardException;
+use eWAY\Exception\InvalidCreditCardException;
 
 /**
  * Credit Card class

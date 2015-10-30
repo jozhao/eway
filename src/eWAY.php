@@ -11,9 +11,9 @@
  * @copyright (c) 2015, XiNG Digital
  */
 
-namespace XiNG\eWAY;
+namespace eWAY;
 
-use XiNG\eWAY\Payment\PaymentFactory as PaymentFactory;
+use eWAY\Payment\PaymentFactory as PaymentFactory;
 
 /**
  * Class eWAY

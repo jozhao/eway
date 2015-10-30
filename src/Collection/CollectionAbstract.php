@@ -4,9 +4,9 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Collection;
+namespace eWAY\Collection;
 
-use XiNG\eWAY\Common\Helper;
+use eWAY\Common\Helper;
 
 /**
  * Class Collection

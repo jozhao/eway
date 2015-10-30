@@ -4,7 +4,7 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Rapid\Message;
+namespace eWAY\Rapid\Message;
 
 /**
  * Class RapidDirectPurchaseRequest

@@ -4,7 +4,7 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Payment;
+namespace eWAY\Payment;
 
 /**
  * Interface PaymentInterface

@@ -4,11 +4,11 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\Message;
+namespace eWAY\Message;
 
-use XiNG\eWAY\Collection\Collection;
-use XiNG\eWAY\Common\Helper;
-use XiNG\eWAY\Exception\RuntimeException;
+use eWAY\Collection\Collection;
+use eWAY\Common\Helper;
+use eWAY\Exception\RuntimeException;
 
 /**
  * Class Request

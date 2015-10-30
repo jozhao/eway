@@ -6,7 +6,7 @@
 
 require __DIR__.'/../vendor/autoload.php';
 
-$payment = XiNG\eWAY\eWAY::create('Rapid_Direct');
+$payment = eWAY\eWAY::create('Rapid_Direct');
 
 // Initialise the gateway
 $payment->initialize(

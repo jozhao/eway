@@ -4,4 +4,4 @@
  * eWAY Payment Gateway
  */
 
-namespace XiNG\eWAY\RapidDirect\Message;
+namespace eWAY\RapidDirect\Message;
