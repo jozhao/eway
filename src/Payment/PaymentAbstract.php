@@ -177,7 +177,6 @@ abstract class PaymentAbstract implements PaymentInterface
     public function setCustomer($customer)
     {
         $customer = new CustomerCollection($customer);
-
         $this->setParameter('Customer', $customer->getParameters());
 
         return $this;

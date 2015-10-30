@@ -14,20 +14,16 @@ namespace eWAY\Collection;
  * "Customer": {
  *   "Reference": "A12345",
  *   "Title": "Mr.",
- *   "FirstName": "John",
- *   "LastName": "Smith",
- *   "CompanyName": "Demo Shop 123",
- *   "JobDescription": "Developer",
- *   "Street1": "Level 5",
- *   "Street2": "369 Queen Street",
- *   "City": "Sydney",
- *   "State": "NSW",
- *   "PostalCode": "2000",
+ *   "FirstName": "Joseph",
+ *   "LastName": "Jason",
+ *   "CompanyName": "XiNG Digital",
+ *   "Street1": "PO Box 521",
+ *   "City": "Canberra",
+ *   "State": "ACT",
+ *   "PostalCode": "2912",
  *   "Country": "au",
- *   "Phone": "09 889 0986",
- *   "Mobile": "09 889 6542",
- *   "Email": "demo@example.org",
- *   "Url": "http://www.ewaypayments.com"
+ *   "Email": "info@xing.net.au",
+ *   "Url": "http://www.xing.net.au"
  * }
  * </code>
  */

@@ -17,25 +17,24 @@ $payment->initialize(
     )
 );
 
-$customer = $payment->setCustomer(
+$payment->setCustomer(
     array(
-        'name' => 'Example XiNG',
-        'number' => '4444333322221111',
-        'expiryMonth' => '12',
-        'expiryYear' => '2030',
-        'CVN' => '123',
-        'billingAddress1' => 'PO Box 521',
-        'billingCountry' => 'AU',
-        'billingCity' => 'Canberra',
-        'billingPostcode' => '2912',
-        'billingState' => 'ACT',
+        "Reference" => "A12345",
+        "Title" => "Mr.",
+        "FirstName" => "Joseph",
+        "LastName" => "Jason",
+        "CompanyName" => "XiNG Digital",
+        "Street1" => "PO Box 521",
+        "City" => "Canberra",
+        "State" => "ACT",
+        "PostalCode" => "2912",
+        "Country" => "au",
+        "Email" => "info@xing.net.au",
+        "Url" => "http://www.xing.net.au",
     )
 );
 
-echo "<pre>";
-var_export($customer);
-echo "</pre>";
-
+// Prepare purchase request.
 $request = $payment->purchase(
     array(
         'amount' => '10.00',
@@ -48,14 +47,14 @@ echo "<pre>";
 var_export($request);
 echo "</pre>";
 
-$response = $request->send();
+//$response = $request->send();
 
-echo "<pre>";
-var_export($response);
-echo "</pre>";
+//echo "<pre>";
+//var_export($response);
+//echo "</pre>";
 
-if ($response->isSuccessful()) {
-    echo "Purchase transaction was successful!\n";
-    $txn_id = $response->getTransactionReference();
-    echo "Transaction ID = ".$txn_id."\n";
-}
+//if ($response->isSuccessful()) {
+//    echo "Purchase transaction was successful!\n";
+//    $txn_id = $response->getTransactionReference();
+//    echo "Transaction ID = ".$txn_id."\n";
+//}
